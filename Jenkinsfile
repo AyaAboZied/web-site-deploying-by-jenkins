@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 script {
-                   withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                   withCredentials([usernamePassword(credentialsId: 'aya', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                        sh """
                             docker login -u $USERNAME --password $PASSWORD
                             docker build -t ayaabdelmomen/penguin .
