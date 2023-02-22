@@ -17,7 +17,7 @@ pipeline {
         stage('deploy') {
             steps {
                 script {
-                   withCredentials([file(credentialsId: 'kubernetes_kubeconfig', variable: 'KUBECONFIG')]){
+                   withCredentials([file(credentialsId: 'kubeconfig', variable: 'KUBECONFIG')]){
                   sh """
                       mv Deployment/deploy.yaml Deployment/deploy.yaml.tmp
                       cat Deployment/deploy.yaml.tmp | envsubst > Deployment/deploy.yaml
