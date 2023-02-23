@@ -8,7 +8,6 @@ pipeline {
                             docker bulid gcr.io/mercurial-time-233114/penguin:${BUILD_NUMBER} .
                             docker push gcr.io/mercurial-time-233114/penguin:${BUILD_NUMBER}
                        """
-
                 }
             }
         }
