@@ -15,7 +15,7 @@ spec:
         app: penguin
     spec:
       containers:
-      - image: kareemelkasaby/itimanspenguin:${BUILD_NUMBER}
+      - image: gcr.io/mercurial-time-233114/penguin:${BUILD_NUMBER}
         name: penguin
         imagePullPolicy: Always
         ports:
