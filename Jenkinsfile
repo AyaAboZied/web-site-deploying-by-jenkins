@@ -7,7 +7,7 @@ pipeline {
             steps {
                 script {
                       sh """
-                            docker bulid gcr.io/mercurial-time-233114/penguin:${BUILD_NUMBER} .
+                            docker build -t gcr.io/mercurial-time-233114/penguin:${BUILD_NUMBER} .
                             docker push gcr.io/mercurial-time-233114/penguin:${BUILD_NUMBER}
                        """
                 }
